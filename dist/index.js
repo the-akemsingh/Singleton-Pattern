@@ -1,9 +1,9 @@
 "use strict";
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
-const store_1 = require("./store");
-const logger_1 = require("./logger");
-(0, logger_1.logger)();
-// const gameManager=new GameManager();
-setInterval(() => {
-    store_1.gameManager.addGame(Math.random().toString());
-}, 5000);
+const Manager_1 = require("./Manager");
+// setInterval(() => {
+(_a = Manager_1.PubSubManger.getInstance()) === null || _a === void 0 ? void 0 : _a.Subscribe(Math.random().toString(), "trump");
+(_b = Manager_1.PubSubManger.getInstance()) === null || _b === void 0 ? void 0 : _b.Display();
+// }, 5000);
+// PubSubManger.getInstance()?.DisplayRecord();

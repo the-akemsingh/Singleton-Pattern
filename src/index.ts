@@ -1,8 +1,7 @@
-import { GameManager } from "./store";
-import { logger } from "./logger";
+import { PubSubManger } from "./Manager";
 
-logger();
-
-setInterval(() => {
-    GameManager.getInstance().addGame(Math.random().toString())
-}, 5000);
+// setInterval(() => {
+    PubSubManger.getInstance()?.Subscribe(Math.random().toString(),"trump");
+    PubSubManger.getInstance()?.Display();
+// }, 5000);
+// PubSubManger.getInstance()?.DisplayRecord();
